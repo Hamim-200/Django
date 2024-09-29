@@ -1,0 +1,31 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div style="text-align: center; margin: 20px;">
+    <h3 style="color: #2c3e50; font-family: Arial, sans-serif;">Welcome to Your Task Management Dashboard!</h3>
+    <p style="font-size: 16px; color: #7f8c8d; max-width: 600px; margin: 0 auto;">
+        Manage your tasks efficiently and stay organized. You can view, add, or update your tasks to keep track of your work easily.
+    </p>
+    
+    <h4 style="margin-top: 30px; color: #2980b9;">What would you like to do?</h4>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin: 10px 0;">
+            <a href="{% url 'show_tasks' %}" style="text-decoration: none; color: #2980b9; font-weight: bold;">
+                Show Tasks
+            </a>
+        </li>
+        <li style="margin: 10px 0;">
+            <a href="{% url 'create_task' %}" style="text-decoration: none; color: #2980b9; font-weight: bold;">
+                Add New Task
+            </a>
+        </li>
+        <li style="margin: 10px 0;">
+            <a href="{% url 'show_tasks' %}" style="text-decoration: none; color: #2980b9; font-weight: bold;">
+                View Completed Tasks
+            </a>
+        </li>
+    </ul>
+
+    <h5 style="margin-top: 20px; color: #27ae60;">Get started by organizing your day!</h5>
+</div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div style="display: flex; justify-content: center; margin-top: 30px;">
+    <form action="" method="post" style="width: 100%; max-width: 500px; padding: 20px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary btn-block" style="width: 100%; padding: 10px; font-size: 16px;">Submit</button>
+    </form>
+</div>
+{% endblock content %}
